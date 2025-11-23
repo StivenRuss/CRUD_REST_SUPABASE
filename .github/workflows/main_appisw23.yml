@@ -13,8 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read #This is required for actions/checkout
-
+      contents: read #This is required for actions/checkou
+    env:
+            DB_USER_SUPABASE: ${{ secrets.DB_USER_SUPABASE }}
+            DB_PWD_SUPABASE: ${{ secrets.DB_PWD_SUPABASE }}
     steps:
       - uses: actions/checkout@v4
 
@@ -60,4 +62,5 @@ jobs:
           app-name: 'appISW23'
           slot-name: 'Production'
           package: '*.jar'
+
           
