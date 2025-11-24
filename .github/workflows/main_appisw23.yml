@@ -1,4 +1,4 @@
-name: Build and deploy JAR app to Azure Web App - ExamenDos
+name: Deploy Java App to Azure - appISW23
 
 on:
   push:
@@ -58,6 +58,6 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'ExamenDos'
+          app-name: 'appISW23'   # <- Nombre real de la Web App
           slot-name: 'Production'
           package: '*.jar'
